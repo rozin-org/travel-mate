@@ -17,42 +17,7 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-/* Layout components */
-.main-container {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url('../assets/images/index/img.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
+/* Header styles */
 .header {
     width: 100%;
     background-color: #364037;
@@ -60,6 +25,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* sticky */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* stays above everything */
 }
 
 .header-content {
@@ -116,6 +86,41 @@ img {
     color: #ffffff;
     font-size: 24px;
     cursor: pointer;
+}
+
+/* Layout components */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/images/index/img.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .hero-content {
@@ -358,61 +363,128 @@ img {
     color: #ffffff;
 }
 
+
+.newsletter-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #7d5b47;
+    padding: 40px 16px;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.newsletter-title {
+    font-size: 34px;
+    font-family: Rubik;
+    font-weight: 900;
+    line-height: 41px;
+    text-align: center;
+    color: #f0decb;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.newsletter-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: none;
+    border-radius: 22px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Rubik;
+    font-size: 16px;
+    text-align: right;
+}
+
+.newsletter-button {
+    font-size: 20px;
+    font-family: Rubik;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #926e4a;
+    border: none;
+    border-radius: 22px;
+    padding: 8px 34px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+    background-color: #7d5b47;
+}
+/* Footer */
+
 .footer {
     width: 100%;
     background-color: #364037;
-    padding: 40px 20px;
-    margin-top: 400px;
+    padding: 102px 56px;
+    align-items: center;
+    align-content: center;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 32px;
     align-items: center;
+    gap: 24px;
 }
 
 .footer-nav {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    align-items: start;
 }
 
-.footer-nav-item {
-    background: none;
-    border: none;
+.footer-link {
     color: #ffffff;
+    text-decoration: none;
     font-size: 16px;
-    font-family: Rubik;
     font-weight: 500;
-    padding: 16px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    padding: 20px;
+    transition: color 0.3s ease;
 }
 
-.footer-nav-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-logo-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+.footer-link:hover {
+    color: #f0decb;
 }
 
 .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-logo img {
     width: 80px;
     height: 80px;
 }
 
 .footer-logo-text {
-    font-size: 24px;
-    font-family: Rubik;
+    font-size: 20px;
     font-weight: 500;
     color: #f0decb;
 }
@@ -440,141 +512,141 @@ a:focus {
 /* Responsive media queries */
 @media (min-width: 640px) {
     .header {
-    padding: 20px 24px;
+        padding: 20px 24px;
     }
     
     .logo-image {
-    width: 40px;
-    height: 40px;
+        width: 40px;
+        height: 40px;
     }
     
     .logo-text {
-    font-size: 18px;
+        font-size: 18px;
     }
     
     .hero-title {
-    font-size: 70px;
+        font-size: 70px;
     }
     
     .hero-subtitle {
-    font-size: 18px;
+        font-size: 18px;
     }
     
     .cta-button {
-    font-size: 18px;
-    padding: 14px 28px;
+        font-size: 18px;
+        padding: 14px 28px;
     }
     
     .feature-content {
-    flex-direction: row;
-    gap: 32px;
+        flex-direction: row;
+        gap: 32px;
     }
     
     .feature-image {
-    max-width: 350px;
+        max-width: 350px;
     }
     
     .feature-title {
-    font-size: 28px;
+        font-size: 28px;
     }
     
     .feature-description {
-    font-size: 20px;
+        font-size: 20px;
     }
     
     .blog-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
     }
     
     .blog-card-image {
-    height: 220px;
+        height: 220px;
     }
     
     .blog-card-title {
-    font-size: 20px;
+        font-size: 20px;
     }
     
     .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px;
     }
     
     .footer-nav {
-    flex-direction: row;
-    gap: 24px;
+        flex-direction: row;
+        gap: 24px;
     }
 }
 
 @media (min-width: 768px) {
     .header {
-    padding: 28px 32px;
+        padding: 28px 32px;
     }
     
     .logo-image {
-    width: 58px;
-    height: 58px;
+        width: 58px;
+        height: 58px;
     }
     
     .logo-text {
-    font-size: 24px;
+        font-size: 24px;
     }
     
     .hamburger {
-    display: none;
+        display: none;
     }
     
     .nav-menu {
-    display: flex;
-    gap: 60px;
+        display: flex;
+        gap: 60px;
     }
     
     .nav-item {
-    font-size: 18px;
+        font-size: 18px;
     }
     
     .hero-title {
-    font-size: 85px;
+        font-size: 85px;
     }
     
     .hero-subtitle {
-    font-size: 20px;
+        font-size: 20px;
     }
     
     .feature-title {
-    font-size: 32px;
+        font-size: 32px;
     }
     
     .feature-description {
-    font-size: 22px;
+        font-size: 22px;
     }
     
     .blog-title {
-    font-size: 28px;
+        font-size: 28px;
     }
     
     .blog-grid {
-    grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .blog-card-image {
-    height: 240px;
+        height: 240px;
     }
     
     .blog-card-title {
-    font-size: 22px;
+        font-size: 22px;
     }
     
     .stats-grid {
-    grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
     
     .stat-number {
-    font-size: 56px;
+        font-size: 56px;
     }
     
     .stat-label {
-    font-size: 16px;
+        font-size: 16px;
     }
 }
 
@@ -619,6 +691,18 @@ a:focus {
     .stat-number {
     font-size: 64px;
     }
+    .footer-link {
+        font-size: 20px;
+    }
+
+    .footer-logo img {
+        width: 108px;
+        height: 108px;
+    }
+
+    .footer-logo-text {
+        font-size: 28px;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -635,10 +719,6 @@ a:focus {
     }
     
     .stats-container {
-    max-width: 1400px;
-    }
-    
-    .footer-content {
     max-width: 1400px;
     }
 }

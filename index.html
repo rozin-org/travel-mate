@@ -5,36 +5,31 @@
   <title>TravelMate - מדריך הטיולים הישראלי | מסלולים ואטרקציות</title>
   <meta name="description" content="TravelMate - הפלטפורמה המובילה לטיולים בישראל. מסלולים מומלצים, מסעדות מעולות, מקומות לינה ייחודיים וחוויות אמיתיות בכל פינה בארץ. התחילו במסע שלכם עוד היום!" />
   <meta name="keywords" content="טיולים בישראל, מסלולי טיולים, מסעדות מומלצות, לינה בישראל, חוויות טיול, צפון הארץ, דרום הארץ, מרכז הארץ" />
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="TravelMate - מדריך הטיולים הישראלי המוביל" />
-  <meta property="og:description" content="גלו את הטיולים הכי שווים בישראל עם TravelMate. מסלולים, מסעדות ולינה מיוחדים שיקפיצו לכם את החופשה!" />
-  
   <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
+  <header class="header">
+      <div class="header-content">
+        <div class="logo-section">
+          <a href="index.html"> <img src="assets/images/index/img_image_21.png" alt="TravelMate לוגו - מדריך טיולים בישראל" class="logo-image"/></a>
+          <span class="logo-text">TravelMate</span>
+        </div>
+        
+        <button class="hamburger" aria-label="תפריט ניווט">☰</button>
+        
+        <nav class="nav-menu" role="navigation">
+          <a href="north.html" class="nav-item" role="menuitem">טיולים בצפון הארץ</a>
+          <a href="center.html" class="nav-item" role="menuitem">טיולים במרכז הארץ</a>
+          <a href="south.html" class="nav-item" role="menuitem">טיולים בדרום הארץ</a>
+          <a href="about.html" class="nav-item" role="menuitem">אודות</a>
+          <a href="contact.html" class="nav-item" role="menuitem">צור קשר</a>
+        </nav>
+      </div>
+  </header>
   <main class="main-container">
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-overlay">
-        <header class="header">
-          <div class="header-content">
-            <div class="logo-section">
-              <img src="assets/images/index/img_image_21.png" alt="TravelMate Logo" class="logo-image" />
-              <span class="logo-text">TravelMate</span>
-            </div>
-            
-            <button class="hamburger" aria-label="תפריט ניווט">☰</button>
-            
-            <nav class="nav-menu" role="navigation">
-              <a href="#contact" class="nav-item" role="menuitem">צור קשר</a>
-              <a href="#south" class="nav-item" role="menuitem">טיולים בדרום הארץ</a>
-              <a href="#north" class="nav-item" role="menuitem">טיולים בצפון הארץ</a>
-              <a href="#center" class="nav-item" role="menuitem">טיולים במרכז הארץ</a>
-            </nav>
-          </div>
-        </header>
         
         <div class="hero-content">
           <h1 class="hero-title">
@@ -170,22 +165,31 @@
         </div>
       </div>
     </section>
-    
-    <!-- Footer -->
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <h2 class="newsletter-title">הרשם לניוזלטר שלנו לקבל עכונים על יעדים חמים שכדאי לבקר בהם</h2>
+
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="כתובת אימייל" required />
+          <span class="form-label">אימייל*</span>
+          <button type="submit" class="newsletter-button">הירשם עכשיו</button>
+        </form>
+      </div>
+    </section>
+  </main>
+   <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <nav class="footer-nav">
-          <button class="footer-nav-item">טיולים במרכז הארץ</button>
-          <button class="footer-nav-item">טיולים בצפון הארץ</button>
-          <button class="footer-nav-item">טיולים בדרום הארץ</button>
+           <a href="north.html" class="footer-link">טיולים בצפון הארץ</a>
+           <a href="center.html" class="footer-link">טיולים במרכז הארץ</a>
+          <a href="south.html" class="footer-link">טיולים בדרום הארץ</a>
         </nav>
-        
-        <div class="footer-logo-section">
-          <img src="assets/images/index/img_image_21.png" alt="TravelMate Logo" class="footer-logo" />
-          <span class="footer-logo-text">TravelMate</span>
+        <div class="footer-logo">
+          <img src="assets/images/index/img_image_21.png" alt="TravelMate Logo" />
+          <div class="footer-logo-text">TravelMate</div>
         </div>
       </div>
     </footer>
-  </main>
 </body>
 </html>

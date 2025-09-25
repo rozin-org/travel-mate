@@ -1,0 +1,165 @@
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>צור קשר | TravelMate - טיולים בישראל</title>
+    <meta name="description" content="צור קשר עם TravelMate לקבלת ייעוץ מקצועי על טיולים בישראל. מחפש המלצות על מסלולים, לינה או ציוד? נשמח לעזור לך לתכנן את הטיול המושלם." />
+    <meta name="keywords" content="צור קשר, טיולים בישראל, ייעוץ טיולים, מסלולי טיול, לינה, TravelMate" />
+    <link rel="stylesheet" href="css/contact.css" />
+</head>
+
+<body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-section">
+          <a href="index.html"> <img src="assets/images/contact/img_image_21.png" alt="TravelMate לוגו - מדריך טיולים בישראל" class="logo-image"/></a>
+          <span class="logo-text">TravelMate</span>
+        </div>
+        
+        <button class="hamburger" aria-label="תפריט ניווט">☰</button>
+        
+        <nav class="nav-menu" role="navigation">
+          <a href="north.html" class="nav-item" role="menuitem">טיולים בצפון הארץ</a>
+          <a href="center.html" class="nav-item" role="menuitem">טיולים במרכז הארץ</a>
+          <a href="south.html" class="nav-item" role="menuitem">טיולים בדרום הארץ</a>
+          <a href="about.html" class="nav-item" role="menuitem">אודות</a>
+          <a href="contact.html" class="nav-item" role="menuitem">צור קשר</a>
+        </nav>
+      </div>
+    </header>
+   
+    <main class="main-container">
+        <div class="content-section">
+            <section class="contact-section">
+                <div class="contact-container">
+                    <h1 class="contact-title">צור קשר</h1>
+
+                    <p class="contact-description">
+                        יש לך שאלה על טיול? מחפש המלצה על מסלול, לינה או ציוד? נשמח לשמוע ממך ולעזור לך לתכנן את הטיול המושלם
+                    </p>
+
+                    <div class="divider-line"></div>
+
+                    <form class="form-section">
+                        <div class="form-group">
+                            <label class="form-label" for="fullName">שם מלא*</label>
+                            <input type="text" id="fullName" class="form-input" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">אימייל*</label>
+                            <input type="email" id="email" class="form-input" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="phone">טלפון</label>
+                            <input type="tel" id="phone" class="form-input" />
+                        </div>
+
+                        <div class="radio-group" role="radiogroup" aria-labelledby="inquiry-type">
+                            <div class="radio-item">
+                                <input type="radio" id="accommodation" name="inquiryType" class="radio-input" value="accommodation" />
+                                <label for="accommodation" class="radio-label">הזמנת מקום לינה</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="accessible" name="inquiryType" class="radio-input" value="accessible" />
+                                <label for="accessible" class="radio-label">טיול נגיש (מתאים לעגלות/כיסאות גלגלים)</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="other" name="inquiryType" class="radio-input" value="other" />
+                                <label for="other" class="radio-label">אחר</label>
+                            </div>
+                        </div>
+
+                        <div class="textarea-section">
+                            <label class="textarea-label" for="details">פירוט בנושא הפנייה</label>
+                            <textarea id="details" class="form-textarea" placeholder="פרט כאן את פנייתך..."></textarea>
+                        </div>
+                    </form>
+
+                    <div class="contact-footer">
+                        <img src="assets/images/contact/img_image_21.png" alt="TravelMate Logo" class="logo-image" />
+                        <span class="logo-text">TravelMate</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter-section">
+                <div class="newsletter-container">
+                    <h2 class="newsletter-title">הרשם לניוזלטר שלנו לקבל עכונים על יעדים חמים שכדאי לבקר בהם</h2>
+
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="כתובת אימייל" required />
+                        <span class="form-label">אימייל*</span>
+                        <button type="submit" class="newsletter-button">הירשם עכשיו</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <nav class="footer-nav">
+           <a href="north.html" class="footer-link">טיולים בצפון הארץ</a>
+           <a href="center.html" class="footer-link">טיולים במרכז הארץ</a>
+          <a href="south.html" class="footer-link">טיולים בדרום הארץ</a>
+        </nav>
+        <div class="footer-logo">
+          <img src="assets/images/contact/img_image_21.png" alt="TravelMate Logo" />
+          <div class="footer-logo-text">TravelMate</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        // Radio button functionality
+        document.querySelectorAll('.radio-input').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Remove selected class from all radio buttons
+                document.querySelectorAll('.radio-input').forEach(r => r.classList.remove('selected'));
+                // Add selected class to the checked radio button
+                if (this.checked) {
+                    this.classList.add('selected');
+                }
+            });
+        });
+
+        // Form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (!fullName || !email) {
+                alert('אנא מלא את השדות החובה');
+                return;
+            }
+
+            if (!email.includes('@')) {
+                alert('אנא הכנס כתובת אימייל תקינה');
+                return;
+            }
+
+            alert('הפנייה נשלחה בהצלחה! נחזור אליך בהקדם.');
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = this.querySelector('.newsletter-input').value.trim();
+
+            if (!email || !email.includes('@')) {
+                alert('אנא הכנס כתובת אימייל תקינה');
+                return;
+            }
+
+            alert('נרשמת בהצלחה לניוזלטר!');
+            this.querySelector('.newsletter-input').value = '';
+        });
+        
+    </script>
+</body>
+</html>
