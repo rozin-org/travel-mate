@@ -203,7 +203,7 @@ img {
     line-height: 41px;
     text-align: center;
     color: #7d5b47;
-    margin-bottom: 42px;
+    margin-bottom: 10px;
 }
 
 .trail-card {
@@ -279,7 +279,7 @@ img {
 }
 
 .accommodation-section {
-    margin-top: 228px;
+    margin-top: 85px;
 }
 
 .accommodation-content {
@@ -339,10 +339,12 @@ img {
 }
 
 .food-section {
-    margin-top: 330px;
+    margin-top: 85px;
 }
 
 .food-content {
+    /*align-items: flex-start;*/
+    padding-top: 10px; /* creates space above the grid */
     display: flex;
     align-items: center;
     gap: 32px;
@@ -351,7 +353,7 @@ img {
 .food-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 10px;
     width: 40%;
 }
 
@@ -361,17 +363,16 @@ img {
 }
 
 .food-text {
+    margin-top: 0; /* or a smaller positive value */
     flex: 1;
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 26px;
 }
 
 .food-item {
-    display: flex;
+
     flex-direction: column;
-    align-items: flex-end;
 }
 
 .food-title {
@@ -391,6 +392,7 @@ img {
     line-height: 24px;
     text-align: right;
     color: #000000;
+    margin-bottom: 45px;
 }
 
 .food-description-long {
@@ -524,7 +526,7 @@ img {
     
     .section-title {
     font-size: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     }
     
     .trail-card {

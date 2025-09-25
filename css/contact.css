@@ -95,7 +95,6 @@ body {
 
 
 .content-section {
-    display: flex;
     flex-direction: column;
     gap: 242px;
     justify-content: flex-start;
@@ -284,6 +283,7 @@ body {
     width: 100%;
     background-color: #7d5b47;
     padding: 40px 16px;
+    margin-top: 100px;
 }
 
 .newsletter-container {
@@ -295,6 +295,7 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 .newsletter-title {
