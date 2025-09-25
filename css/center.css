@@ -235,7 +235,6 @@ img {
 
 .trail-info {
     width: 78%;
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
