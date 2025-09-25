@@ -157,32 +157,35 @@ img {
     align-items: center;
 }
 
-.nav-button {
+.nav-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 126px 0 190px;
+    margin-bottom: 112px;
+}
+
+.nav-button {
     background-color: #7d5b47;
+    color: #ffffff;
+    border: none;
     border-radius: 22px;
     padding: 6px 34px;
+    font-size: 24px;
+    font-family: Rubik;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: center;
     box-shadow: 0px 4px 4px #0000003f;
-    border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 280px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .nav-button:hover {
     background-color: #6b4a38;
     transform: translateY(-2px);
-}
-
-.nav-button-text {
-    font-size: 20px;
-    font-family: Rubik;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    color: #ffffff;
 }
 
 .section-title {
@@ -463,13 +466,15 @@ img {
         max-width: 850px;
     }
 
-    .nav-button {
-        width: auto;
-        min-width: 200px;
+    .nav-buttons {
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 0 60px 0;
     }
-
-    .nav-button-text {
-        font-size: 22px;
+    
+    .nav-button {
+    width: 100%;
+    font-size: 18px;
     }
 
     .section-title {
@@ -537,7 +542,18 @@ img {
         gap: 24px;
     }
 }
+@media (max-width: 639px) {
+  .nav-buttons {
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 16px 60px 16px; /* tighter margins for mobile */
+  }
 
+  .nav-button {
+    width: 100%;
+    font-size: 18px;
+  }
+}
 @media (min-width: 768px) {
     .header {
         padding: 28px 32px;
@@ -564,7 +580,18 @@ img {
     .nav-item {
         font-size: 18px;
     }
+    .nav-buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 24px;
+        margin: 0 auto 60px auto;
+    }
 
+    .nav-button {
+        width: auto;
+        font-size: 20px;
+        padding: 10px 24px;
+    }
     .content-wrapper {
         padding: 0 32px;
     }

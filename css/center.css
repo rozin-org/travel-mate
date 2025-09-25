@@ -370,7 +370,6 @@ img {
 }
 
 .food-item {
-
     flex-direction: column;
 }
 
@@ -456,7 +455,7 @@ img {
 /* Responsive media queries */
 @media (max-width: 640px) {
     .container {
-    padding: 0 8px;
+        padding: 0 8px;
     }
     
     .header {
@@ -477,84 +476,84 @@ img {
     }
     
     .hero-section {
-    padding: 24px 16px;
-    margin-top: 60px;
+        padding: 24px 16px;
+        margin-top: 60px;
     }
     
     .hero-content {
-    flex-direction: column;
-    gap: 24px;
+        flex-direction: column;
+        gap: 24px;
     }
     
     .hero-image {
-    width: 100%;
+        width: 100%;
     }
     
     .hero-text {
-    width: 100%;
-    gap: 24px;
+        width: 100%;
+        gap: 24px;
     }
     
     .hero-title {
-    font-size: 24px;
-    margin-right: 0;
-    text-align: center;
+        font-size: 24px;
+        margin-right: 0;
+        text-align: center;
     }
     
     .hero-description {
-    font-size: 16px;
-    line-height: 28px;
-    width: 100%;
+        font-size: 16px;
+        line-height: 28px;
+        width: 100%;
     }
     
     .main-content {
-    padding: 0 16px;
-    margin-top: 60px;
+        padding: 0 16px;
+        margin-top: 60px;
     }
     
     .nav-buttons {
-    flex-direction: column;
-    gap: 16px;
-    margin: 0 0 60px 0;
+        flex-direction: column;
+        gap: 16px;
+        margin: 0 0 60px 0;
     }
     
     .nav-button {
-    width: 100%;
-    font-size: 18px;
+        width: 100%;
+        font-size: 18px;
     }
     
     .section-title {
-    font-size: 24px;
-    margin-bottom: 10px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
     
     .trail-card {
-    flex-direction: column;
-    padding: 16px;
+        flex-direction: column;
+        padding: 16px;
     }
     
     .trail-image {
-    width: 100%;
-    margin-bottom: 16px;
+        width: 100%;
+        margin-bottom: 16px;
     }
     
     .trail-content {
-    width: 100%;
-    gap: 16px;
+        width: 100%;
+        gap: 16px;
     }
     
     .trail-info {
-    width: 100%;
+        width: 100%;
     }
     
     .trail-title {
-    font-size: 18px;
-    text-align: center;
+        font-size: 18px;
+        text-align: center;
     }
     
     .trail-description {
-    font-size: 16px;
-    line-height: 28px;
+        font-size: 16px;
+        line-height: 28px;
     }
     
     .trail-details {
