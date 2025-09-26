@@ -175,19 +175,29 @@
         </section>
     </div>
 </main>
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-    <nav class="footer-nav">
-        <a href="north.html" class="footer-link">טיולים בצפון הארץ</a>
-        <a href="center.html" class="footer-link">טיולים במרכז הארץ</a>
-        <a href="south.html" class="footer-link">טיולים בדרום הארץ</a>
-    </nav>
-    <div class="footer-logo">
-        <img src="assets/images/north/img_image_21.png" alt="TravelMate Logo" />
-        <div class="footer-logo-text">TravelMate</div>
-    </div>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+        <nav class="footer-nav">
+            <a href="north.html" class="footer-link">טיולים בצפון הארץ</a>
+            <a href="center.html" class="footer-link">טיולים במרכז הארץ</a>
+            <a href="south.html" class="footer-link">טיולים בדרום הארץ</a>
+        </nav>
+        <div class="footer-logo">
+            <img src="assets/images/north/img_image_21.png" alt="TravelMate Logo" />
+            <div class="footer-logo-text">TravelMate</div>
+        </div>
+        </div>
+    </footer>
+    <script >
+        document.addEventListener("DOMContentLoaded", () => {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+
+            hamburger.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>

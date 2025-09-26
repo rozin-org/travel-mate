@@ -59,6 +59,10 @@ body {
     align-items: center;
 }
 
+.nav-menu.active {
+    display: flex;
+}
+
 .nav-item {
     font-size: 16px;
     font-family: Rubik;
@@ -442,6 +446,22 @@ body {
 }
 
 /* Responsive media queries */
+@media (max-width: 639px) {
+    .nav-menu {
+            display: none;
+            align-items: center;
+            flex-direction: column;
+            gap: 16px;
+            position: absolute;
+            top: 60px;
+            left: 16px;
+            background-color: #364037;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
 @media (min-width: 640px) {
     .header {
         padding: 20px 24px;
