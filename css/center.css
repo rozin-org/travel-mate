@@ -95,7 +95,7 @@ img {
     margin: 0 auto;
     padding: 0 16px;
 }
-
+/*
 .brand-name {
     font-size: 24px;
     font-family: Rubik;
@@ -103,7 +103,7 @@ img {
     line-height: 29px;
     color: #f0decb;
 }
-
+*/
 .hero-section {
     background-color: #364037;
     padding: 52px 60px;
@@ -656,7 +656,18 @@ img {
     gap: 24px;
     }
 }
-
+@media (max-width: 639px) {
+    .nav-buttons {
+        flex-direction: column;
+        gap: 16px;
+        margin: 0 0 60px 0;
+    }
+    
+    .nav-button {
+        width: 100%;
+        font-size: 18px;
+    }
+}
 @media (min-width: 640px) and (max-width: 768px) {
     .header {
         padding: 20px 24px;
@@ -689,6 +700,32 @@ img {
     
     .food-grid {
     grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-buttons {
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 126px 0 190px;
+        margin-bottom: 112px;
+        flex-direction: row;
+    }
+
+    .nav-button {
+        background-color: #7d5b47;
+        color: #ffffff;
+        border: none;
+        border-radius: 22px;
+        padding: 10px 24px;
+        font-size: 24px;
+        font-family: Rubik;
+        font-weight: 700;
+        line-height: 29px;
+        text-align: center;
+        box-shadow: 0px 4px 4px #0000003f;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+         width: auto;
     }
     .footer-nav {
     flex-direction: row;
@@ -737,6 +774,32 @@ img {
     
     .food-content {
     flex-direction: row;
+    }
+    .nav-buttons {
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 126px 0 190px;
+        margin-bottom: 112px;
+        flex-direction: row;
+    }
+
+    .nav-button {
+        background-color: #7d5b47;
+        color: #ffffff;
+        border: none;
+        border-radius: 22px;
+        padding: 10px 24px;
+        font-size: 24px;
+        font-family: Rubik;
+        font-weight: 700;
+        line-height: 29px;
+        text-align: center;
+        box-shadow: 0px 4px 4px #0000003f;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+         width: auto;
     }
 }
 
