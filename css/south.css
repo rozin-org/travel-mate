@@ -150,6 +150,7 @@ img {
 }
 
 .section-title {
+    font-family: Rubik;
     font-size: 24px;
     font-weight: 900;
     color: #7d5b47;
@@ -179,6 +180,7 @@ img {
 }
 
 .destination-title {
+    font-family: Rubik;
     font-size: 18px;
     font-weight: 900;
     color: #000000;
@@ -187,6 +189,7 @@ img {
 }
 
 .destination-description {
+    font-family: Rubik;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.9;
