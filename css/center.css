@@ -1,7 +1,7 @@
 
 /* Reset and base styles */
 * {
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     box-sizing: border-box;
 }
@@ -100,15 +100,7 @@ img {
     margin: 0 auto;
     padding: 0 16px;
 }
-/*
-.brand-name {
-    font-size: 24px;
-    font-family: Rubik;
-    font-weight: 500;
-    line-height: 29px;
-    color: #f0decb;
-}
-*/
+
 .hero-section {
     display: flex;
     flex-direction: column;
