@@ -110,9 +110,16 @@ img {
 }
 */
 .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1466px;
     background-color: #364037;
-    padding: 52px 60px;
-    margin-top: 114px;
+    border-radius: 52px;
+    padding: 52px 32px;
+    gap: 24px;
 }
 
 .hero-content {
