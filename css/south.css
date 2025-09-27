@@ -455,6 +455,10 @@ img {
 }
 
 @media (max-width: 639px) {
+    .main-content {
+        /*padding: 0 56px;*/
+        margin-top: 10px;
+    }
     .nav-buttons {
         flex-direction: column;
         gap: 16px;

@@ -472,7 +472,7 @@ img {
     .nav-buttons {
     flex-direction: column;
     gap: 16px;
-    margin: 0 0 60px 0;
+    margin: 0 126px 0 190px;
     }
     
     .nav-button {
@@ -549,7 +549,7 @@ img {
   .nav-buttons {
     flex-direction: column;
     gap: 16px;
-    margin: 0 16px 60px 16px; /* tighter margins for mobile */
+    margin: 10px 16px 60px 16px; /* tighter margins for mobile */
   }
 
   .nav-button {
@@ -601,7 +601,7 @@ img {
         flex-direction: row;
         justify-content: space-between;
         gap: 24px;
-        margin: 0 auto 60px auto;
+        margin: 16px 126px 0 190px;
     }
 
     .nav-button {
