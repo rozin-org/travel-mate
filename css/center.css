@@ -411,35 +411,34 @@ img {
     width: 60%;
 }
 
-/* Footer */
+/* General footer styles */
 .footer {
-    width: 100%;
     background-color: #364037;
-    padding: 102px 56px;
-    align-items: center;
-    align-content: center;
+    color: #ffffff;
+    padding: 40px 16px; /* Adjust padding for spacing */
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack content vertically */
     align-items: center;
-    gap: 24px;
+    gap: 24px; /* Space between elements */
 }
 
 .footer-nav {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: start;
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+    justify-content: center; /* Center links */
+    gap: 32px; /* Space between links */
 }
 
 .footer-link {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
+    font-family: 'Rubik', Arial, sans-serif;
     font-weight: 500;
-    padding: 20px;
     transition: color 0.3s ease;
 }
 
@@ -451,17 +450,18 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 8px; /* Space between logo and text */
 }
 
 .footer-logo img {
-    width: 80px;
+    width: 80px; /* Adjust logo size */
     height: 80px;
 }
 
 .footer-logo-text {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 20px; /* Adjust text size */
+    font-family: 'Rubik', Arial, sans-serif;
+    font-weight: 700;
     color: #f0decb;
 }
 
@@ -489,6 +489,26 @@ img {
     .nav-button {
         width: 100%;
         font-size: 18px;
+    }
+    .footer-content {
+        gap: 16px; /* Reduce spacing */
+    }
+
+    .footer-nav {
+        gap: 16px; /* Reduce space between links */
+    }
+
+    .footer-link {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .footer-logo img {
+        width: 60px; /* Smaller logo for mobile */
+        height: 60px;
+    }
+
+    .footer-logo-text {
+        font-size: 16px; /* Adjust text size for mobile */
     }
 }
 @media (max-width: 640px) {
