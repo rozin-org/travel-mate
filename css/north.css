@@ -136,6 +136,13 @@ img {
     height: auto;
     border-radius: 8px;
 }
+.hero-title {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #f0decb;
+    margin-bottom: 46px;
+}
 
 .hero-text {
     font-size: 24px;
@@ -457,6 +464,10 @@ img {
     .logo-text {
         font-size: 18px;
     }
+    
+    .hero-title {
+        font-size: 28px;
+    }
 
     .hero-text {
         font-size: 28px;
@@ -646,6 +657,10 @@ img {
         width: 28%;
         max-width: none;
     }
+    .hero-title {
+        font-size: 34px;
+        text-align: center;
+    }
 
     .hero-text {
         font-size: 34px;
@@ -668,6 +683,14 @@ img {
     
     .nav-menu {
         gap: 106px;
+    }
+    
+    .hero-title {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 24px;
     }
 
     .content-wrapper {
