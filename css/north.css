@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Rubik', Arial, sans-serif;
+    font-family: Rubik, Arial, sans-serif;
     background-color: #ffffff;
     line-height: 1.6;
     direction: rtl;
@@ -415,7 +415,7 @@ img {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    font-family: 'Rubik', Arial, sans-serif;
+    font-family: Rubik, Arial, sans-serif;
     font-weight: 500;
     transition: color 0.3s ease;
 }
