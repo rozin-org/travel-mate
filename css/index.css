@@ -439,6 +439,21 @@ img {
 .newsletter-button:hover {
     background-color: #7d5b47;
 }
+.email_lable{
+    display: flex;
+    width: 73.769px;
+    height: 52px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #F0DECB;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
 /* Footer */
 
 .footer {
@@ -492,26 +507,6 @@ img {
     font-size: 20px;
     font-weight: 500;
     color: #f0decb;
-}
-
-/* Typography */
-.text-right {
-    text-align: right;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/* Interactive states */
-button:focus {
-    outline: 2px solid #2563eb;
-    outline-offset: 2px;
-}
-
-a:focus {
-    outline: 2px solid #2563eb;
-    outline-offset: 2px;
 }
 
 /* Responsive media queries */

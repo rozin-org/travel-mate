@@ -12,6 +12,15 @@ body {
     line-height: 1.6;
     direction: rtl;
 }
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 136px;
+    padding: 0 16px;
+}
 
 img {
     max-width: 100%;
