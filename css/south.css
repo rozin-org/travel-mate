@@ -42,6 +42,7 @@ img {
     width: 100%;
     gap: 136px;
     padding: 0 16px;
+    font-family: Rubik;
 }
 .header-content {
     width: 100%;
@@ -121,6 +122,7 @@ img {
     border-radius: 52px;
     padding: 52px 32px;
     gap: 24px;
+    font-family: Rubik;
 }
 
 .hero-content {
@@ -139,6 +141,7 @@ img {
 
 .hero-text {
     text-align: center;
+    font-family: Rubik;
 }
 
 .hero-title {
@@ -147,6 +150,7 @@ img {
     line-height: 1.2;
     color: #f0decb;
     margin-bottom: 46px;
+    font-family: Rubik;
 }
 
 .hero-description {
@@ -184,12 +188,14 @@ img {
     border-radius: 8px;
     overflow: hidden;
     background-color: #ffffff;
+    font-family: Rubik;
 }
 
 .destination-content {
     display: flex;
     flex-direction: column;
     padding: 18px;
+    font-family: Rubik;
 }
 
 .destination-image {
@@ -224,6 +230,7 @@ img {
     line-height: 1.9;
     color: #000000;
     text-align: right;
+    font-family: Rubik;
 }
 
 .destination-line {
@@ -241,6 +248,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 76px;
+    font-family: Rubik;
 }
 
 .accommodation-grid {
@@ -259,6 +267,7 @@ img {
 
 .accommodation-text {
     text-align: right;
+    font-family: Rubik;
 }
 
 .accommodation-title {
@@ -266,6 +275,7 @@ img {
     font-weight: 900;
     color: #000000;
     margin-bottom: 18px;
+    font-family: Rubik;
 }
 
 .accommodation-description {
@@ -273,6 +283,7 @@ img {
     font-weight: 400;
     line-height: 1.9;
     color: #000000;
+    font-family: Rubik;
 }
 
 .nav-buttons {
@@ -307,10 +318,12 @@ img {
 }
 
 .food-section {
+    font-family: Rubik;
     margin-top: 50px;
 }
 
 .food-content {
+    font-family: Rubik;
     display: flex;
     flex-direction: column;
     gap: 130px;
@@ -330,10 +343,12 @@ img {
 }
 
 .food-text {
+    font-family: Rubik;
     text-align: right;
 }
 
 .food-title {
+    font-family: Rubik;
     font-size: 18px;
     font-weight: 900;
     color: #000000;
@@ -341,6 +356,7 @@ img {
 }
 
 .food-description {
+    font-family: Rubik;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.9;
@@ -396,7 +412,7 @@ img {
 
 .footer-logo-text {
     font-size: 20px; /* Adjust text size */
-    font-family: 'Rubik', Arial, sans-serif;
+    font-family: Rubik, Arial, sans-serif;
     font-weight: 700;
     color: #f0decb;
 }

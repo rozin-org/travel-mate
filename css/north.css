@@ -276,6 +276,7 @@ img {
 
 /* Accommodation section */
 .accommodation-section {
+    font-family: Rubik;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -311,6 +312,7 @@ img {
     flex-direction: column;
     gap: 16px;
     width: 100%;
+    font-family: Rubik;
 }
 
 .accommodation-type {
@@ -338,8 +340,7 @@ img {
     gap: 74px;
     width: 100%;
     align-items: center;
-    /*padding: 0 16px;
-    margin-top: 0px;*/
+
 }
 
 .food-content {
@@ -348,6 +349,7 @@ img {
     gap: 32px;
     width: 100%;
     max-width: 1420px;
+    font-family: Rubik;
 }
 
 .food-grid {
@@ -370,6 +372,7 @@ img {
     flex-direction: column;
     gap: 32px;
     width: 100%;
+    font-family: Rubik;
 }
 
 .food-place {
@@ -405,6 +408,7 @@ img {
 }
 
 .footer-content {
+    font-family: Rubik;
     display: flex;
     flex-direction: column; /* Stack content vertically */
     align-items: center;
@@ -445,7 +449,7 @@ img {
 
 .footer-logo-text {
     font-size: 20px; /* Adjust text size */
-    font-family: 'Rubik', Arial, sans-serif;
+    font-family: Rubik;
     font-weight: 700;
     color: #f0decb;
 }
@@ -684,7 +688,7 @@ img {
     .nav-menu {
         gap: 106px;
     }
-    
+
     .hero-title {
         font-size: 34px;
     }
