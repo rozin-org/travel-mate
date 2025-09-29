@@ -380,6 +380,7 @@ img {
     flex-direction: column;
     align-items: flex-end;
     gap: 26px;
+    font-family: Rubik;
 }
 
 .food-item {
@@ -437,7 +438,7 @@ img {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    font-family: Rubik, Arial, sans-serif;
+    font-family: Rubik;
     font-weight: 500;
     transition: color 0.3s ease;
 }

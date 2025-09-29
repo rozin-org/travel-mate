@@ -78,6 +78,7 @@ img {
     padding: 8px 12px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    font-family: Rubik;
 }
 
 .nav-item:hover {
@@ -497,7 +498,7 @@ img {
     color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    font-family: Rubik, Arial, sans-serif;
+    font-family: Rubik;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -520,7 +521,7 @@ img {
 
 .footer-logo-text {
     font-size: 20px; /* Adjust text size */
-    font-family: Rubik, Arial, sans-serif;
+    font-family: Rubik;
     font-weight: 700;
     color: #f0decb;
 }
