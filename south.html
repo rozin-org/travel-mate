@@ -17,6 +17,8 @@
         <span class="logo-text">TravelMate</span>
         </div>
 
+        <button class="hamburger" aria-label="תפריט ניווט">☰</button>
+
         <nav class="nav-menu" role="navigation">
         <a href="north.html" class="nav-item" role="menuitem">טיולים בצפון הארץ</a>
         <a href="center.html" class="nav-item" role="menuitem">טיולים במרכז הארץ</a>
@@ -260,7 +262,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             const hamburger = document.querySelector(".hamburger");
             const navMenu = document.querySelector(".nav-menu");
-            if (!hamburger) return;
+            if (!hamburger || !navMenu) return;
             hamburger.addEventListener("click", () => {
                 navMenu.classList.toggle("active");
             });

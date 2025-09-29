@@ -73,13 +73,17 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Hamburger menu */
 .hamburger {
-    display: block;
+    position: absolute; /* Position it relative to the header */
+    top: 16px; /* Distance from the top */
+    left: 16px; /* Distance from the right */
+    font-size: 24px; /* Adjust size */
     background: none;
     border: none;
-    color: #ffffff;
-    font-size: 24px;
+    color: #ffffff; /* Adjust color */
     cursor: pointer;
+    z-index: 1000; /* Ensure it stays above other elements */
 }
 /* Header styles */
 .header-content {
