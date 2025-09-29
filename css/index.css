@@ -40,6 +40,89 @@ img {
     align-items: center;
 }
 
+/* Breadcrumbs */
+/* Header styles */
+.header-content {
+    display: flex;
+    flex-direction: column; /* Stack navigation and breadcrumbs vertically */
+    align-items: center;
+    gap: 16px; /* Space between rows */
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center; /* Center navigation links */
+}
+
+/* Breadcrumbs */
+/* Header styles */
+.header-content {
+    display: flex;
+    flex-direction: column; /* Stack navigation and breadcrumbs vertically */
+    align-items: center;
+    gap: 16px; /* Space between rows */
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center; /* Center navigation links */
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    font-size: 14px;
+    font-family: 'Rubik', Arial, sans-serif;
+    color: #364037;
+    text-align: center; /* Center breadcrumbs */
+}
+
+.breadcrumb-list {
+    display: inline-flex; /* Inline breadcrumbs */
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center; /* Align items vertically */
+}
+
+.breadcrumb-item {
+    display: inline;
+}
+
+.breadcrumb-link {
+    color: #f0decb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #6b4a38;
+}
+
+.breadcrumb-current {
+    color: #364037;
+    font-weight: bold;
+}
+
+.breadcrumb-separator {
+    color: #7d5b47; /* Arrow color */
+    font-size: 14px;
+}
+
+/* Adjust logo-section to accommodate breadcrumbs */
+.logo-section {
+    display: flex;
+    flex-direction: column; /* Stack logo, text, and breadcrumbs vertically */
+    align-items: center;
+    gap: 8px; /* Space between logo, text, and breadcrumbs */
+}
+
 .logo-section {
     display: flex;
     align-items: center;

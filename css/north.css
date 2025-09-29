@@ -31,14 +31,6 @@ img {
     z-index: 1000; /* stays above everything */
 }
 
-.header-content {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo-section {
     display: flex;
     align-items: center;
@@ -89,6 +81,51 @@ img {
     font-size: 24px;
     cursor: pointer;
 }
+/* Header styles */
+.header-content {
+    display: flex;
+    flex-direction: column; /* Stack logo, navigation, and breadcrumbs vertically */
+    align-items: center;
+    gap: 16px; /* Space between elements */
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    font-size: 14px;
+    font-family: 'Rubik', Arial, sans-serif;
+    color: #364037;
+    text-align: center;
+    margin-top: auto; /* Push breadcrumbs to the bottom */
+}
+
+.breadcrumb-list {
+    display: inline-flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item {
+    display: inline;
+}
+
+
+.breadcrumb-link {
+    color: #f0decb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #6b4a38;
+}
+
+.breadcrumb-separator {
+    color: #7d5b47;
+    font-size: 14px;
+}
+
 /* Layout components */
 .main-container {
     display: flex;

@@ -9,24 +9,37 @@
   <link rel="stylesheet" href="css/center.css" />
 </head>
 <body>
-  <header class="header">
-      <div class="header-content">
-        <div class="logo-section">
-          <a href="index.html"> <img src="assets/images/center/img_image_21.png" alt="TravelMate לוגו - מדריך טיולים בישראל" class="logo-image"/></a>
-          <span class="logo-text">TravelMate</span>
-        </div>
-        
-        <button class="hamburger" aria-label="תפריט ניווט">☰</button>
-        
-        <nav class="nav-menu" role="navigation">
-          <a href="north.html" class="nav-item" role="menuitem">טיולים בצפון הארץ</a>
-          <a href="center.html" class="nav-item" role="menuitem">טיולים במרכז הארץ</a>
-          <a href="south.html" class="nav-item" role="menuitem">טיולים בדרום הארץ</a>
-          <a href="about.html" class="nav-item" role="menuitem">אודות</a>
-          <a href="contact.html" class="nav-item" role="menuitem">צור קשר</a>
-        </nav>
-      </div>
-  </header>
+ <header class="header">
+  <div class="header-content">
+    <div class="logo-section">
+      <a href="index.html">
+        <img src="assets/images/index/img_image_21.png" alt="TravelMate לוגו - מדריך טיולים בישראל" class="logo-image" />
+      </a>
+      <span class="logo-text">TravelMate</span>
+    </div>
+
+    <nav class="nav-menu" role="navigation">
+      <a href="north.html" class="nav-item" role="menuitem">טיולים בצפון הארץ</a>
+      <a href="center.html" class="nav-item" role="menuitem">טיולים במרכז הארץ</a>
+      <a href="south.html" class="nav-item" role="menuitem">טיולים בדרום הארץ</a>
+      <a href="about.html" class="nav-item" role="menuitem">אודות</a>
+      <a href="contact.html" class="nav-item" role="menuitem">צור קשר</a>
+    </nav>
+
+    <!-- Breadcrumbs inside header-content -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ul class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="index.html" class="breadcrumb-link">דף הבית</a>
+        </li>
+        <li class="breadcrumb-separator">←</li>
+        <li class="breadcrumb-item">
+          <a href="center.html" class="breadcrumb-link">טיולים במרכז הארץ</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <main class="content-wrapper">
     <section class="hero-section">
         <div class="container">
@@ -252,7 +265,7 @@
       document.addEventListener("DOMContentLoaded", () => {
           const hamburger = document.querySelector(".hamburger");
           const navMenu = document.querySelector(".nav-menu");
-
+          if (!hamburger || !navMenu) return;
           hamburger.addEventListener("click", () => {
               navMenu.classList.toggle("active");
           });

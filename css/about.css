@@ -92,6 +92,66 @@ img {
     cursor: pointer;
 }
 
+/* Header styles */
+.header {
+    background-color: #364037;
+    color: #ffffff;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* Space between elements */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* Space between logo and navigation */
+}
+
+/* Navigation menu */
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    font-size: 14px;
+    font-family: 'Rubik', Arial, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 16px; /* Space above breadcrumbs */
+}
+
+.breadcrumb-list {
+    display: inline-flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-item {
+    display: inline;
+}
+
+.breadcrumb-link {
+    color: #f0decb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #d9bfa6;
+}
+
+.breadcrumb-separator {
+    color: #f0decb;
+    font-size: 14px;
+}
 /* Layout components */
 .main-container {
     display: flex;
@@ -367,6 +427,7 @@ img {
     .hero-title {
         font-size: 28px;
         line-height: 36px;
+        
     }
 
     .hero-description {
@@ -432,6 +493,7 @@ img {
     .hero-title {
         font-size: 32px;
         line-height: 40px;
+        margin: 100px 0 0 12px;
     }
 
     .hero-description {
