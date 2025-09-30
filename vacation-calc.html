@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Image Selector</title>
+    <link rel="stylesheet" href="css/vacation-calc.css" />
+</head>
+<body>
+
+    <form id="selectionForm" action="result.html" method="GET">
+
+        <h1>Select an Image to View (Radio Buttons)</h1>
+
+        <div id="radioControls">
+            <label>
+                <input type="radio" name="imageSelector" value="northImage" onclick="showImage(this.value); checkButtonState()">
+                North Image
+            </label><br>
+
+            <label>
+                <input type="radio" name="imageSelector" value="centerImage" onclick="showImage(this.value); checkButtonState()">
+                Center Image
+            </label><br>
+
+            <label>
+                <input type="radio" name="imageSelector" value="southImage" onclick="showImage(this.value); checkButtonState()">
+                South Image
+            </label>
+        </div>
+        
+
+        <hr>
+
+        <div id="imageContainer" class="imageContainer">
+            <img id="northImage" src="assets/images/north/img_yoav_aziz_ugps2.png" alt="North" class="imageNorth">
+            <img id="centerImage" src="assets/images/center/img_yoav_aziz_ugps2.png" alt="Center" class="imageCenter">
+            <img id="southImage" src="assets/images/south/img_yoav_aziz_ugps2.png" alt="South" class="imageSouth">
+        </div>
+
+        <h2>בחר את החופשה החלומית</h2>
+        
+        <div class="controls" id="checkboxControls">
+            <label>
+                <input type="checkbox" name="alphaChecker" value="רומנטית" onclick="toggleOpacity('alphaImg1', this.checked); checkButtonState()">
+                רומנטית
+            </label><br>
+            <label>
+                <input type="checkbox" name="alphaChecker" value="הרפתקאה" onclick="toggleOpacity('alphaImg2', this.checked); checkButtonState()">
+                הרפתקאה
+            </label><br>
+            <label>
+                <input type="checkbox" name="alphaChecker" value="משפחתית" onclick="toggleOpacity('alphaImg3', this.checked); checkButtonState()">
+                משפחתית
+            </label><br>
+            <label>
+                <input type="checkbox" name="alphaChecker" value="חופשה אקזוטית" onclick="toggleOpacity('alphaImg4', this.checked); checkButtonState()">
+                חופשה אקזוטית
+            </label>
+        </div>
+
+        <div class="image-row">
+            <img id="alphaImg1" class="alpha-image" src="assets/images/vacation-calc/1.jpg" alt="רומנטית">
+            <img id="alphaImg2" class="alpha-image" src="assets/images/vacation-calc/2.jpg" alt="הרפתקאה">
+            <img id="alphaImg3" class="alpha-image" src="assets/images/vacation-calc/3.jpg" alt="משפחתית">
+            <img id="alphaImg4" class="alpha-image" src="assets/images/vacation-calc/4.jpg" alt="חופשה אקזוטית">
+        </div>
+
+        <button id="submitButton" type="submit" disabled>
+            Proceed
+        </button>
+
+    </form>
+
+
+    <script src="./js/vacation-calc.js"></script>
+</body>
+</html>

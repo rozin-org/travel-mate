@@ -1,0 +1,57 @@
+/* CSS for the opacity-controlled images */
+.alpha-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    margin: 5px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.4; /* Initial semi-transparent state */
+}
+
+.image-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px dashed #eee;
+    padding: 10px;
+}
+
+/* NEW CSS for the button */
+#submitButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    /* Initial semi-alpha style */
+    opacity: 0.5; 
+    cursor: not-allowed;
+    border: 1px solid #999;
+    background-color: #f0f0f0;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+#submitButton:not(:disabled) {
+    /* Full opacity and active appearance when enabled */
+    opacity: 1.0;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green color for active state */
+    color: white;
+    border-color: #4CAF50;
+}
+.imageContainer {
+    /*text-align: center;*/
+    margin-bottom: 20px;
+}
+.imageNorth {
+    max-width: 300px;
+    display: none;
+}
+.imageCenter {
+    max-width: 300px;
+    display: none;
+}
+.imageSouth {
+    max-width: 300px;
+    display: none;
+}
