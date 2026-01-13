@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Audio Recorder 2026</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 20px; }
+        .controls { margin-top: 20px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>YouTube Iframe Recorder</h2>
+    
+    <!-- YouTube Iframe -->
+    <iframe id="yt-player" width="560" height="315" 
+            src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+            frameborder="0" allow="autoplay; encrypted-media"></iframe>
+
+    <div class="controls">
+        <button id="startBtn">Start Recording</button>
+        <button id="stopBtn" disabled>Stop & Save</button>
+    </div>
+
+    <script>
+        let mediaRecorder;
+        let chunks = [];
+
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+
+        startBtn.onclick = async () => {
+            try {
+                // 1. Capture the tab's stream (User must check "Share tab audio")
+                const stream = await navigator.mediaDevices.getDisplayMedia({
+                    video: true, // Required by browsers to access the audio checkbox
+                    audio: true
+                });
+
+                // 2. Extract only the audio track to save as a file
+                const audioStream = new MediaStream(stream.getAudioTracks());
+                
+                // Optional: Stop the video track to save system resources
+                stream.getVideoTracks().forEach(track => track.stop());
+
+                // 3. Initialize MediaRecorder
+                mediaRecorder = new MediaRecorder(audioStream);
+                mediaRecorder.ondataavailable = (e) => chunks.push(e.data);
+                
+                mediaRecorder.onstop = () => {
+                    const blob = new Blob(chunks, { type: 'audio/mp3' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'youtube_audio_2026.mp3';
+                    a.click();
+                    chunks = [];
+                };
+
+                mediaRecorder.start();
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+            } catch (err) {
+                console.error("Capture failed:", err);
+                alert("Make sure to select 'Chrome Tab' and check 'Share tab audio'.");
+            }
+        };
+
+        stopBtn.onclick = () => {
+            mediaRecorder.stop();
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+        };
+    </script>
+</body>
+</html>
