@@ -1,0 +1,8 @@
+{
+  "name": "Smart Camera",
+  "short_name": "SmartCam",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": "icon-192.png",
+  "permissions": ["camera"]
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koofr Camera Upload</title>
+<style>
+body { font-family: Arial; text-align:center; margin:20px; }
+video { width:90%; max-width:400px; border:1px solid #ccc; border-radius:8px; margin-bottom:10px; }
+button { padding:10px 20px; font-size:16px; border-radius:5px; }
+#status { margin-top:20px; font-weight:bold; }
+</style>
+</head>
+<body>
+<h1>Camera → Koofr Upload</h1>
+
+<video id="video" autoplay playsinline></video>
+<button id="captureBtn">Take Picture & Upload</button>
+<p id="status"></p>
+
+<script>
+const video = document.getElementById("video");
+const captureBtn = document.getElementById("captureBtn");
+const status = document.getElementById("status");
+
+const KOOFR_WEBDAV_URL = "https://app.koofr.net/dav/Koofr/CameraUploads/";
+
+// 1️⃣ Open camera
+async function initCamera() {
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } });
+        video.srcObject = stream;
+    } catch (err) {
+        status.textContent = "Camera error: " + err.message;
+    }
+}
+(async () => {
+    initCamera();
+
+    // 2️⃣ Load WASM credentials
+    let authHeader;
+    async function loadWasm() {
+        const resp = await fetch("auth.wasm");
+        const bytes = await resp.arrayBuffer();
+        const wasm = await WebAssembly.instantiate(bytes);
+        const ptr = wasm.instance.exports.get_auth();
+        const memory = new Uint8Array(wasm.instance.exports.memory.buffer);
+
+        // Read until null (or max 256 bytes)
+        let str = "";
+        for (let i=ptr; i<ptr+256; i++) {
+            if (memory[i] === 0) break;
+            str += String.fromCharCode(memory[i]);
+        }
+        authHeader = str;
+    }
+    await loadWasm();
+
+    // 3️⃣ Capture + upload
+    captureBtn.addEventListener("click", async () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext("2d").drawImage(video, 0, 0);
+
+        const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/jpeg", 0.9));
+        if (!blob) { status.textContent = "Capture failed"; return; }
+
+        const fileName = "photo_" + Date.now() + ".jpg";
+        const fileUrl = KOOFR_WEBDAV_URL + fileName;
+
+        status.textContent = "Uploading...";
+
+        try {
+            const res = await fetch(fileUrl, {
+                method: "PUT",
+                headers: {
+                    "Authorization": authHeader,
+                    "Content-Type": blob.type
+                },
+                body: blob
+            });
+
+            status.textContent = res.ok ? "Upload successful!" : "Upload failed: " + res.statusText;
+        } catch (err) {
+            status.textContent = "Upload error: " + err.message;
+        }
+    });
+})();   
+</script>
+</body>
+</html>
