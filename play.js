@@ -1,6 +1,6 @@
 // ---------------- CONFIG ----------------
 const clientId = "72ab1593eaf44789bf478dab42ed836d";
-const redirectUri = "http://localhost:8888/"; // dev URI
+const redirectUri = "https://rozin-org.github.io/travel-mate/play.html";
 const playlistId = "3WS6zmsdvRWu5dVf8nfEOG"; // replace with your playlist
 
 let token = null;
