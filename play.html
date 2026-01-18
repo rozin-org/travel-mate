@@ -9,6 +9,11 @@
   <button id="loginBtn">Login with Spotify</button>
   <button id="nextBtn" disabled>Next ▶️</button>
   <div id="trackInfo"></div>
+  <script>
+    window.onSpotifyWebPlaybackSDKReady = () => {
+        console.log("Spotify SDK Ready!");
+    };
+  </script>
 
   <script src="https://sdk.scdn.co/spotify-player.js"></script>
   <script src="play.js"></script>
